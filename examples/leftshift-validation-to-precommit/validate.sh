@@ -88,7 +88,6 @@ function update_path {
 #	$1 - name of dependency (ie. gator, kpt, etc.)
 #######################################
 function check_dependency {
-
 	if command -v "$1" &>/dev/null; then
 		echo "$1 exists in your path:"
 		printf '%s \n\n' "$PATH" 
@@ -122,7 +121,7 @@ echo $'Dependencies installed and properly configured.\n'
 ########################################################
 
 # Get constraint, template, and k8s locations from setup.sh
-eval 'export $(xargs < .env)'
+eval 'export $(xargs <.env)'
 echo 'Templates location:' "$TEMPLATES_LOCATION"
 echo 'Constraints location:' "$CONSTRAINTS_LOCATION"
 echo 'K8s Manifests location:' "$KUBERNETES_DIR"

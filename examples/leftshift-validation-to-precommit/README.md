@@ -8,6 +8,7 @@ Using left-shift validate means you learn *if your deployments are going to fail
 
 ---
 
+
 # Setup
 
 Using left-shift validation is simple!
@@ -62,7 +63,6 @@ Left-shift validation is intended to run as a pre-commit hook, so it has been de
 We have [pre-included](constraints-and-templates/oss-constraint-templates-library/) the constraint templates from the open-source OPA repository. If you are using these templates, you specify so during setup.sh and the pre-commit hook will use the /constraints-and-templates directory as the location for the templates.
 To manually specify:
 - In your `.env` file, make sure the `TEMPLATES_LOCATION` environment variable is set to `/constraints-and-templates`.	
-
 
 ---
 
