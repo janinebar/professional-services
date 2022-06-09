@@ -81,6 +81,7 @@ cd "$PWD"/$INSTALL_DIR/ || exit
 touch dependency_info.txt
 
 # shellcheck source=/dev/null
+
 source dependency_info.txt &>/dev/null
 system_info=$SYS_INFO
 last_kpt_version=$KPT_VERSION
@@ -327,12 +328,14 @@ echo $'\n-----\n'
 # .git/hooks folder. This configuration includes information on which directories
 # to use for constraints, constraint templates, and kubernetes manifests.
 
+
 # Warn user that this script will overwrite their current configuration.
 read -r -p "This script will overwrite your current pre-validate configuration. Are you sure you want to continue? [y/N] " response
 if [[ ! "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
     exit 0
 fi
 echo $'\n-----\n'
+
 
 ########################################################
 ################### Obtain Policies ###################
